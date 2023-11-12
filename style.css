@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --main-color: #191919;
+  --text-color: #dddddd;
+  --second-color: #e43d40;
+  --df-margin: 10px;
+  --df-padding: 10px;
+  --df-radius: 5px;
+  --df-border: 5px solid var(--second-color);
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--main-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App {
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--second-color);
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-intro {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+button {
+  padding: 0.3rem 1.3rem;
+  margin-right: 0.2rem;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--second-color) 0%,
+    var(--second-color) 10%,
+    var(--main-color) 50%,
+    var(--main-color) 100%
+  );
+  color: var(--text-color);
+  transition: 0.3s;
+  transition: background-size 1s, background-color 1s;
+}
+button:hover,
+.btn-active {
+  transition: 0.3s;
+  background-image: linear-gradient(
+    to right,
+    var(--second-color) 0%,
+    var(--second-color) 30%,
+    var(--main-color) 100%,
+    var(--main-color) 100%
+  );
+  transition: background-size 1s, background-color 1s;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.hided {
+  display: none;
+}
+
+.field {
+  background: rgb(253, 165, 165);
+}
+
+.App-board {
+  background: rgb(49, 29, 29);
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 70%;
+  aspect-ratio: 1/1;
+}
+
+.mine {
+  background: rgb(104, 43, 43);
+}
+
+.App-label {
+  text-align: center;
+}
+
+.mine-active {
+  background: red;
+}
